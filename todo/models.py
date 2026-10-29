@@ -12,7 +12,7 @@ class BaseModel(models.Model):
 
 
 class Category(BaseModel):
-    category = models.CharField(max_length=255)
+    name = models.CharField(max_length=255)
     
 
 class Todo(BaseModel):
