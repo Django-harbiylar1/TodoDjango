@@ -11,12 +11,13 @@ User = get_user_model()
 
 def home(request):
 
-    categories = Category.objects.all()
-    users = User.objects.all()
+    categories = Category.objects.all() # SELECT * FROM todo_category;
+    users = User.objects.all()          # SELECT * FROM auth_user;
+    categories_filtered = Category.objects.filter(is_active=True)
 
     a = random.randint(1,100)
     print(a, '####################################')
 
 
     
-    return render( request=request, context={'fronta':a, 'categories':categories, 'users': users}, template_name='index.html')
+    return render( request=request, context={'fronta':a, 'categories':categories, 'users': users, 'categories_filtered':categories_filtered}, template_name='index.html')

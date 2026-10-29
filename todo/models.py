@@ -12,6 +12,7 @@ class BaseModel(models.Model):
 
 
 class Category(BaseModel):
+    is_active = models.BooleanField(default=True)
     name = models.CharField(max_length=255)
     
 

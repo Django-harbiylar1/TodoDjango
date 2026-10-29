@@ -21,6 +21,11 @@
         <h1>{{user.username}}</h1>
 
     {% endfor %}
+
+
+    {%for c_f in categories_filtered%}
+            {{c_f.name}}
+    {%endfor%}
     
 </body>
 </html>
